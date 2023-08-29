@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void Printstar()
+void Sleep()
 {
      for (int i = 0; i < 6; i++)
     {
@@ -20,7 +20,7 @@ int TemperatureOfOk(float temperature)
     if(temperature > 102 || temperature <95)
     {
         cout<<"Temperature critical!\n";
-        Printstar();
+        Sleep();
         return 0;
     }
     return 1;
@@ -32,7 +32,7 @@ int PulseRate(float pulseRate)
     if(pulseRate < 60 || pulseRate > 100)
     {
         cout<<"Pulse Rate is out of range!\n";
-        Printstar();
+        Sleep();
         return 0;
     }
     return 1;
@@ -40,25 +40,17 @@ int PulseRate(float pulseRate)
 
 int Spo2(float spo2)
 {
-    if(Spo2 < 90)
+    if(spo2 < 90)
     {
         cout << "Oxygen Saturation out of range!\n";
-        Printstar();
+        Sleep();
         return 0;
     }
     return 1;
 }
 
 int vitalsOk(float temperature, float pulseRate, float spo2) {
-  if(!TemperatureOfOk(temperature))
-    {
-        return 0;
-    }
-    else if(!PulseRate(pulseRate))
-    {
-        return 0;
-    }
-    else if(!Spo2(spo2))
+  if(!TemperatureOfOk(temperature) || !PulseRate(pulseRate) || !Spo2(spo2))
     {
         return 0;
     }
