@@ -20,7 +20,7 @@ int TemperatureOfOk(float temperature)
     if(temperature > 102 || temperature <95)
     {
         cout<<"Temperature critical!\n";
-        helper();
+        Printstar();
         return 0;
     }
     return 1;
@@ -32,7 +32,7 @@ int PulseRate(float pulseRate)
     if(pulseRate < 60 || pulseRate > 100)
     {
         cout<<"Pulse Rate is out of range!\n";
-        helper();
+        Printstar();
         return 0;
     }
     return 1;
@@ -43,7 +43,7 @@ int Spo2(float spo2)
     if(Spo2 < 90)
     {
         cout << "Oxygen Saturation out of range!\n";
-        helper();
+        Printstar();
         return 0;
     }
     return 1;
