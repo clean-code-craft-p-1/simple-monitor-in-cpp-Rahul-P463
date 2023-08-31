@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void Sleep()
+void getAttention()
 {
      for (int i = 0; i < 6; i++)
     {
@@ -15,7 +15,7 @@ void Sleep()
     }
 }
 
-int TemperatureOfOk(float temperature)
+int isTemperatureOk(float temperature)
 {
     if(temperature > 102 || temperature <95)
     {
@@ -27,7 +27,7 @@ int TemperatureOfOk(float temperature)
     
 }
 
-int PulseRate(float pulseRate)
+int isPulseRateOk(float pulseRate)
 {
     if(pulseRate < 60 || pulseRate > 100)
     {
@@ -38,7 +38,7 @@ int PulseRate(float pulseRate)
     return 1;
 }
 
-int Spo2(float spo2)
+int isSpo2Ok(float spo2)
 {
     if(spo2 < 90)
     {
@@ -50,7 +50,7 @@ int Spo2(float spo2)
 }
 
 int vitalsOk(float temperature, float pulseRate, float spo2) {
-     !TemperatureOfOk(temperature) || !PulseRate(pulseRate) || !Spo2(spo2);
+     !isTemperatureOk(temperature) || !isPulseRateOk(pulseRate) || !isSpo2Ok(spo2);
 }
 
 int main() {
