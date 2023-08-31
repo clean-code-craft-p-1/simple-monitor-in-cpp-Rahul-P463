@@ -20,7 +20,7 @@ int isTemperatureOk(float temperature)
     if(temperature > 102 || temperature <95)
     {
         cout<<"Temperature critical!\n";
-        Sleep();
+        getAttention();
         return 0;
     }
     return 1;
@@ -32,7 +32,7 @@ int isPulseRateOk(float pulseRate)
     if(pulseRate < 60 || pulseRate > 100)
     {
         cout<<"Pulse Rate is out of range!\n";
-        Sleep();
+        getAttention();
         return 0;
     }
     return 1;
@@ -43,7 +43,7 @@ int isSpo2Ok(float spo2)
     if(spo2 < 90)
     {
         cout << "Oxygen Saturation out of range!\n";
-        Sleep();
+        getAttention();
         return 0;
     }
     return 1;
