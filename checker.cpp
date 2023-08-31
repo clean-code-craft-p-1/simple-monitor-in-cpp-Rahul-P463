@@ -50,11 +50,7 @@ int Spo2(float spo2)
 }
 
 int vitalsOk(float temperature, float pulseRate, float spo2) {
-  if(!TemperatureOfOk(temperature) || !PulseRate(pulseRate) || !Spo2(spo2))
-    {
-        return 0;
-    }
-  return 1;
+     !TemperatureOfOk(temperature) || !PulseRate(pulseRate) || !Spo2(spo2);
 }
 
 int main() {
