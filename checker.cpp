@@ -19,6 +19,7 @@ string getPulseRateCondition(float pulseRate)
         if(pulseRate >= i.second.first && pulseRate <= i.second.second)
         {
             pulseCondition = i.first;
+            break;
         }
     }
     return pulseCondition;
@@ -36,6 +37,7 @@ string getSpo2Condition(float spo2)
         if(spo2 >= i.second.first && spo2 <= i.second.second)
         {
             spo2Condition = i.first;
+            break;
         }
     }
     return spo2Condition;
@@ -56,6 +58,7 @@ string getTemperatureCondition(float temp)
         if(temp >= i.second.first && temp <= i.second.second)
         {
             tempertureCondition = i.first;
+            break;
         }
     }
     return tempertureCondition;
